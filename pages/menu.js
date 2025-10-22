@@ -4,6 +4,6 @@ exports.MenuPage = class menu {
     }
 
     async gotoLogin() {
-        await this.page.goto('http://the-internet.herokuapp.com/login');
+        await this.page.goto('http://the-internet.herokuapp.com/login')
     }
 }
