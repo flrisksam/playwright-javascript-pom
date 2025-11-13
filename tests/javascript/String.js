@@ -8,15 +8,11 @@ console.log("Last Name: " + lname + " Type: " + typeof lname)
 //Size and position related methods. Index starts from 0
 console.log("Lenght: "+fname.length)                                    //number of characters
 console.log("Char at index 3: " + fname.charAt(3))                      //character at index 3
-console.log("First Index of 'a': " + fname.indexOf('a'))                      //first occurrence
+console.log("First Index of 'a': " + fname.indexOf('a'))                //first occurrence
 console.log("Last Index of 'a': " + fname.lastIndexOf('a'))             //last occurrence
 console.log("Search for 'kumar' in fname: " + fname.search('kumar'))    //index of match or -1. indexOf starting letter.
 console.log("Substring (1,4): " + fname.substring(1, 4))                //index 1 to 4
 console.log("Slice (1,4): " + fname.slice(1,4))                         //index 1 to 4 ???
-
-//Case Conversion methods
-console.log("To Upper Case: " + fname.toUpperCase())                    //convert to upper case
-console.log("To Lower Case: " + fname.toLowerCase())                    //convert to lower case
 
 //Type Conversion methods
 let price = Number(value)                                               //convert String to Number
@@ -25,6 +21,10 @@ value = parseInt("200")                                                 //conver
 console.log("To Int: " + value + " is " + typeof value)                
 console.log("To Float: " + parseFloat("20.55"))                         //convert String to Float
 console.log("To Fixed (2): " + (20.5567).toFixed(2))                    //convert Float to String with 2 decimal places
+
+//Case Conversion methods
+console.log("To Upper Case: " + fname.toUpperCase())                    //convert to upper case
+console.log("To Lower Case: " + fname.toLowerCase())                    //convert to lower case
 
 //Locale case conversion methods
 console.log("String Locale Upper Case: " + fname.toLocaleUpperCase())   //locale upper case ???
@@ -69,7 +69,7 @@ console.log("Character Code at index 2 of fname: " + fname.charCodeAt(2))   //ch
 console.log("From Char Code 65,66,67: " + String.fromCharCode(65,66,67))    //ABC
 
 //Template Literals and Escape Sequences
-let message = 'Final \tamount is \'1000\' \nThank you!'
+let message = 'Final \tamount is \'1000\' \nThank you!\n'
 let newMessage = `Final amount is 
 '1000' 
 Thank you!`
