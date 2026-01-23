@@ -31,7 +31,7 @@ test.afterAll( async () => {
     await page.close();
 });
 
-test.only('Valid Login', async ({ page }) => {
+test('Valid Login', async ({ page }) => {
     await loginPage.login('tomsmith', 'SuperSecretPassword!');
     await expect(page.getByText('You logged into a secure area!')).toBeVisible();
 });

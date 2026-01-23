@@ -29,7 +29,8 @@ console.log("Joined arr3: " + arr3.join('-'))               //join
 console.log("Sliced arr1 (1 to 4): " + arr1.slice(1, 4))    //slice (from index 1 to 4, excluding 4). returns new array.
 console.log("Spliced arr2: " + arr2.splice(2, 2, 100, 200)) //splice (from index 2, remove 2 elements, add 100 and 200). returns removed elements.
 console.log("Reversed arr3: " + arr3.reverse())             //reverse
-console.log("Sorted arr1: " + arr1.sort((a, b) => a - b))   //sort (ascending order)                                        
+console.log("Ascending Sorted arr1: " + arr1.sort((a, b) => a - b))   //sort (ascending order)   
+console.log("Descending Sorted arr2: " + arr2.sort((a, b) => b - a))   //sort (descending order)                            
 console.log("fill 0 from index 1 to 4: " + arr2.fill(0, 1, 4))  //fill (fill with 0 from index 1 to 4)
 
 //Higher-order functions. Map, Filter, Reduce
@@ -37,7 +38,7 @@ console.log("Map: " + arr1.map(x => x * 2))                 //map (multiply each
 
 function fun(e) { return e + 2 }                            //function for map
 mappedArr = arr1.map(fun)                                   //map using function
-console.log("Mapped arr1: " + mappedArr)
+console.log("Actual Array " + arr1 + " Mapped arr1: " + mappedArr)
 
 console.log("Filtered arr2: " + arr2.filter(x => x > 20) ) //filter (elements greater than 20. returns new array.)
 
@@ -51,11 +52,11 @@ arr1.forEach((value, index) => {                            //forEach iteration.
     console.log("Index " + index + ": " + value)
 })
 
-console.log("Iterating arr2 using for...of:")
+console.log("Iterating arr2 using for...of: Returns values")
 for (let value of arr2) {                                   //for...of iteration. value as parameter
     console.log(value)
 }
-console.log("Iterating arr3 using for...in:")
+console.log("Iterating arr3 using for...in: Returns indices")
 for (let index in arr3) {                                   //for...in iteration. index as parameter
     console.log("Index " + index + ": " + arr3[index])
 }
